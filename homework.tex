@@ -1,0 +1,66 @@
+\documentclass[a4paper,12pt]{article}
+\UseRawInputEncoding
+
+% <----------------------------------------->
+% Packages
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\usepackage{listings}
+\lstset{
+  breaklines=true
+}
+\usepackage{datetime}
+\usepackage{listofitems}
+
+% <----------------------------------------->
+% New/renewed commands
+\newcommand{\minus}{\scalebox{0.75}[1.0]{$-$}}
+% Give the derivative elements in a comma element list without white space
+\newcommand{\derseq}[1]{
+	\readlist\derlist{#1}
+	\foreachitem\x\in\derlist{\, d\x}
+}
+\newcommand{\real}[1][]{\mathbb{R}^{#1}}
+\newcommand{\dontcare}{\square}
+\newcommand{\partialder}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\der}[2]{\frac{d{#1}}{d{#2}}}
+\newcommand{\onehalf}{\frac{1}{2}}
+\newcommand{\integral}[4]{\int^{#2}_{#1}{#4}\derseq{#3}}
+% Limit as parameter, default h, goes to infinity
+\newcommand{\liminfty}[1][h]{\lim_{{#1} \to \infty}}
+\newcommand{\set}[1]{\{#1\}}
+
+% <----------------------------------------->
+% Document settings
+\newdate{due_date}{17}{2}{2021}
+\newcommand{\netid}{netid123}
+\newcommand{\name}{Gus Petito}
+\newcommand{\class}{EXAMPLE 1101}
+\newcommand{\homeworknum}{1}
+
+\begin{document}
+
+\begin{center}
+\Large
+\makebox[\textwidth][s]{\mbox{\displaydate{due_date}} \mbox{\name (\netid)}}
+
+\hrule
+\vspace{7mm}
+
+\class\\
+Homework \#\homeworknum
+
+\vspace{7mm}
+\end{center}
+\normalsize
+
+\section*{1.2.5}
+\subsection*{(a)}
+
+\end{document}
+
